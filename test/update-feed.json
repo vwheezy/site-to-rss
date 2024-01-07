@@ -1,0 +1,1 @@
+{"address":"https://plurrrr.com","pattern":"<article><h2{*}href={*}>{%}</a>{*}<blockquote>{%}</blockquote>{*}Source: <a href=\"{%}\"{*}</article>","feedTitle":"Test Feed","feedLink":"https://example.com","feedDescription":"This is a test feed","itemTitle":"{%1}","itemLink":"{%2}","itemContent":"{%6}"}

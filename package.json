@@ -1,0 +1,25 @@
+{
+  "name": "site-to-rss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vincent Whizin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.0.1",
+    "feed": "^4.2.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.0.3",
+    "nanoid": "^3.3.7",
+    "nanoid-dictionary": "^4.3.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.7.0",
+    "xml": "^1.0.1"
+  }
+}

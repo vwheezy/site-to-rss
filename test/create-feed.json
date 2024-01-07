@@ -1,0 +1,1 @@
+{"address":"https://betterdev.link","pattern":"<div{*}class=\"issue-link\">{*}href=\"{%}\" target=\"_blank\">{%}</a>{*}<p><p>{%}</p>","feedTitle":"Test Feed","feedLink":"https://example.com","feedDescription":"This is a test feed","itemTitle":"{%1}","itemLink":"{%2}","itemContent":"{%3}"}

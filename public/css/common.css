@@ -1,0 +1,22 @@
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+code {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.scrollable-container {
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.input-container {
+    white-space: no-wrap;
+    width: 300px;
+    overflow-x: auto;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Site to RSS</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/prism.css">
+</head>
+
+<body>
+    <h1>Modify Feed!</h1>
+    <h2>Step 1. Specify source page address (URL)</h2>
+    <form onsubmit="loadUrlSource(event)">
+        <label for="site-url">Address*</label>
+        <input type="url" name="site-url" id="site-url" required></input>
+
+        <button type="submit">Load</button>
+        <!-- TODO: Add element to register loading was successful -->
+    </form>
+    <label for="page-source-preview">Page Source:</label>
+    <div class="scrollable-container"><pre>
+        <code id="page-source-preview" class="language-html" readonly></code>
+    </pre></div>
+
+
+    <h2>Step 2. Define extraction rules</h2>
+    <form onsubmit="parseExtractionRules(event)">
+        <label for="item-search-pattern">Item (repeatable) Search Pattern*</label>
+        <input type="text" id="item-search-pattern" required></input>
+
+        <button type="submit">Extract</button>
+        <!-- TODO: Add element to register loading was successful -->
+    </form>
+    <label for="clipped-data-preview">Clipped Data:</label>
+    <div class="scrollable-container"><pre>
+        <code id="clipped-data-preview" class="language-markup" readonly></code>
+        <!-- <textarea name="clipped-data-preview" readonly></textarea> -->
+    </pre></div>
+
+
+    <h2>Step 3. Define output format</h2>
+    <form onsubmit="previewFeedContent(event)">
+        <h3>RSS Feed Properties</h3>
+
+        <label for="feed-title">Feed Title*</label>
+        <input type="text" id="feed-title"></input>
+
+        <label for="feed-link">Feed Link</label>
+        <input type="text" id="feed-link"></input>
+
+        <label for="feed-description">Feed Description</label>
+        <textarea id="feed-description"></textarea>
+
+        <h3>RSS Item Properties</h3>
+
+        <label for="item-title-template">Item Title Template*</label>
+        <input type="text" id="item-title-template"></input>
+
+        <label for="item-link-template">Item Link Template*</label>
+        <input type="text" id="item-link-template"></input>
+
+        <label for="item-content-template">Item Content Template*</label>
+        <input type="text" id="item-content-template"></input>
+
+        <!-- <button name="preview-rss-feed-creation">Preview</button> -->
+    </form>
+    <!-- <textarea name="feed-preview" readonly></textarea> -->
+
+    <button id="modify-feed" onclick="modifyFeedContent(event)">Modify Feed</button>
+    <button id="delete-feed" onclick="deleteFeedContent(event)">Delete Feed</button>
+
+
+
+    <script src="/public/js/scrapeLogic.js"></script>
+    <script src="/public/js/modifyFeed.js"></script>
+    <script src="/public/js/prism.js"></script>
+</body>
+
+</html>
